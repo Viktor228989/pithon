@@ -1,10 +1,9 @@
 import random
-import hangman_art as art
+
 
 print(art.intro)
 
-vocabulary = ["Aaron", "Abraham", "Adam, Adrian", "Aidan", "Alan", "Albert", "Alejandro", "AleAlexander", "Alfred", "Andrew" ,"Angel", "Anthony", "Antonio", "Ashton", "Austin"]
-
+vocabulary = ['Anton', 'Alex', 'Alexandr', 'Arsalan', 'Danil', 'Kirill', 'Sergey', 'Nikolay', 'Nasty', 'Natasha', 'Ivan', 'Igor', 'Gosha', 'Galina', 'Olya', 'Oksana', 'Oleg', 'James', 'Bill']
 word_answer = random.choice(vocabulary)
 word_display = []
 
@@ -14,7 +13,7 @@ for _ in range(len(word_answer)):
 print(word_display)
 life = 6
 counter = 0
-    print(art.stages[life])
+
 letter_is_be = False
 
 while life > 0 and counter != len(word_answer):
@@ -34,6 +33,5 @@ while life > 0 and counter != len(word_answer):
 if counter == len(word_answer):
     print("Победа")
 else:
-    print(art.stages[life])
     print("Проиграл")
     print(word_answer)
