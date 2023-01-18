@@ -62,9 +62,31 @@ while True:
     while action != "Б" and action != "П":
         action = input(f">>> (Б - блеф, П - правда) -> ").upper()
 
-    print("\n" * 70)
+    print("\n" * 10)
     input(f">>> {p1Name} открывает глаза(Enter)...")
     if action == "Б":
         print(f"{p2Name} сообщает, что в его коробке {p1Box}")
     else:
         print(f"{p2Name} сообщает, что в его коробке {p2Box}")
+
+     # Обмен
+    change = input("Меняетесь коробка\n"
+                   "Д(меняться) или Н(не меняться) >>>").upper()
+    if change == "Д":
+        p1Box, p2Box = p2Box, p1Box # меняет коробки
+        input(f"{p1Name} Закрывает глаза, (Enter)")
+
+        if p2Box == "Морковка":
+            box2 = box_carrot.format(COLOR2.center(13)).split("\n")
+        else:
+            box2 = box_empty.format(COLOR2.center(13)).split("\n")
+    else:
+        break
+
+print("========== результаты: ============")
+print(generate_boxes(p1Box, p2Box))
+if p1Box == "морковка":
+    print(p1Name, "победил")
+else:
+    print(p2Name, "победил")
+
