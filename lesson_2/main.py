@@ -33,6 +33,6 @@ if h < 10:
     h = "0" + str (h)
 if m < 10:
     m = "0" + str(h)
- if s < 10:
+if s < 10:
     s = "0" + str(h)
 print(f"{h}:{m}:{s}")
