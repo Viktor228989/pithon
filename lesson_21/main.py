@@ -36,37 +36,38 @@
 # print("Ср. арифм =", skladivanie())
 
 # Задача 2
-try:
-   f = open("file.txt", "r", encoding="utf-8")
-except FileNotFoundError:
-    print("Файла нет")
-    exit()
-content = f.readlines()
-if content == []:
-     print("Файл пустой")
-     quit()
-print(content)
+# try:
+#    f = open("file.txt", "r", encoding="utf-8")
+# except FileNotFoundError:
+#     print("Файла нет")
+#     exit()
+# content = f.readlines()
+# if content == []:
+#      print("Файл пустой")
+#      quit()
+# print(content)
+#
+# for i, student in enumerate(content):
+#     content[i] = student.split()
+#
+# print(content)
+#
+# maxi = -1
+# imya = ""
+# familiya = ""
+# for student in content:
+#     try:
+#          if int(student[3]) > maxi:
+#           maxi = int(student[3])
+#           imya = student[1]
+#           familiya = student[0]
+#     except ValueError:
+#         print("Баллы отсутствуют:", student)
+#     except IndexError:
+#          print("Баллы осутствуют:", student)
+#
+# print(imya, familiya,maxi)
 
-for i, student in enumerate(content):
-    content[i] = student.split()
-
-print(content)
-
-maxi = -1
-imya = ""
-familiya = ""
-for student in content:
-    try:
-         if int(student[3]) > maxi:
-          maxi = int(student[3])
-          imya = student[1]
-          familiya = student[0]
-    except ValueError:
-        print("Баллы отсутствуют:", student)
-    except IndexError:
-         print("Баллы осутствуют:", student)
-
-print(imya, familiya,maxi)
 
 
 
