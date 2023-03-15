@@ -1,15 +1,15 @@
-# class Person:  # объявление класса
-#     def __init__(self, imya, vozrast):  # метод инициализации
-#         self.age = vozrast  # Установка значений атрибутов
-#         self.name = imya
-#
-#     def __str__(self):
-#         print("Бархат, кефтеме")
-# leha = Person
-#
-# print(leha)
-# print(leha.age)
-# print(leha.name)
+class Person:  # объявление класса
+    def __init__(self, imya, vozrast):  # метод инициализации
+        self.age = vozrast  # Установка значений атрибутов
+        self.name = imya
+
+    def __str__(self):
+        print("Бархат, кефтеме")
+leha = Person
+
+print(leha)
+print(leha.age)
+print(leha.name)
 
 
 # class Kefteme:
