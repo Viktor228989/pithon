@@ -1,13 +1,26 @@
 from klass import Person
 from random import choice
 def ofor():
-    u = choice(users)
+
     print(f"Логин: {u.login}")
     print(f"Имя: {u.imya}")
     print(f"Фамилия: {u.falimia}")
     print(f"Посты: {u.posts}")
 
+def select_user():
+    # global u
+    # u = choice(users)
+    # while True:
+    #     if u.login == current.login: # если выбрали сами себя
+    #         u = choice(users)
+    #     else:
+    #         break
 
+     global u
+     while True:
+        u = choice(users)
+        if u.login != current.login:
+            break
 def session():
     while True:
         ofor()
@@ -20,7 +33,11 @@ def session():
         if spros == 'Выйти':
             break
         elif spros == 'сЛЕДУЮЩИЙ':
-            continue
+            select_user()
+        elif spros == 'Подписаться':
+            current.podpiskishiki +=1
+            u.podpiskishiki += 1
+
 
 a = Person("Чек")
 b = Person('степан', 'кревесенко', 'yalox', 'jora')
@@ -33,7 +50,6 @@ p = input("скажи пароль: ")
 
 for i in users:
     if i.log_in(login=l, parol=p) == True:
+        current = i
         session()
-
-
 print(c.imya)
