@@ -15,7 +15,7 @@ root.geometry("250x500") #разрешение окна
 #
 # btn = tk.Button(root) # master - привязка к окну
 # btn.bind("<Button-1>", hell_o) # левая кнопка мыши
-# # btn.bind("<Double-Button-1>", hell_o) # ldjqyfz кнопка мыши
+# btn.bind("<Double-Button-1>", hell_o) # ldjqyfz кнопка мыши
 # # btn.bind("<Button-3>", hell_o) # правая кнопка мыши
 # #btn.bind("<Return>", hell_o)
 # # btn['comad'] = hell_o #действие при нажатии
